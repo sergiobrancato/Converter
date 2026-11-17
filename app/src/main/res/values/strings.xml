@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Currency Converter</string>
+    <string name="app_tagline">Reference rates · works offline</string>
+
+    <!-- Converter -->
+    <string name="from_label">From</string>
+    <string name="to_label">To</string>
+    <string name="amount_label">Amount or expression</string>
+    <string name="amount_placeholder">0</string>
+    <string name="amount_hint">Try 12.5 * (3 + 2) or 100 / 4</string>
+    <string name="amount_input_description">Amount or expression input</string>
+    <string name="clear_amount">Clear amount</string>
+    <string name="swap_currencies">Swap currencies</string>
+    <string name="expression_result">= %1$s</string>
+    <string name="converted_amount">Converted amount</string>
+    <string name="conversion_unavailable">—</string>
+    <string name="rate_template">1 %1$s = %2$s %3$s</string>
+    <string name="rate_unavailable">No rate available for this pair yet.</string>
+
+    <!-- Currency picker -->
+    <string name="choose_currency">Choose currency</string>
+    <string name="select_source_currency">Select source currency</string>
+    <string name="select_target_currency">Select target currency</string>
+    <string name="search_currencies_hint">Code or name</string>
+    <string name="clear_search">Clear search</string>
+    <string name="no_currencies_found">No currencies match “%1$s”.</string>
+    <string name="currency_selector_description">Change %1$s currency. Currently %2$s, %3$s.</string>
+
+    <!-- Rates / sync status -->
+    <string name="rates_source">Reference rates</string>
+    <string name="rates_source_date">Reference rates · %1$s</string>
+    <string name="rates_bundled">Built-in estimates · tap to refresh</string>
+    <string name="rates_bundled_source">Offline snapshot · %1$s</string>
+    <string name="rates_updated">Updated %1$s</string>
+    <string name="rates_updating">Updating rates…</string>
+    <string name="rates_offline">Offline · showing saved rates</string>
+    <string name="rates_load_failed">Couldn’t load exchange rates. Check your connection and try again.</string>
+    <string name="loading">Loading…</string>
+
+    <!-- Expression errors -->
+    <string name="error_incomplete_expression">Finish the expression.</string>
+    <string name="error_unbalanced_parentheses">Check the parentheses.</string>
+    <string name="error_division_by_zero">Can’t divide by zero.</string>
+    <string name="error_invalid_number">That number isn’t valid.</string>
+    <string name="error_unexpected_character">Only numbers, + − × ÷ and parentheses are supported.</string>
+    <string name="error_number_too_large">That number is too large.</string>
+    <string name="error_too_complex">That expression is too complex.</string>
+    <string name="error_unknown_expression">Couldn’t evaluate this expression.</string>
+
+    <!-- Operator row (content descriptions for screen readers) -->
+    <string name="operator_add">Add</string>
+    <string name="operator_subtract">Subtract</string>
+    <string name="operator_multiply">Multiply</string>
+    <string name="operator_divide">Divide</string>
+    <string name="operator_open_parenthesis">Open parenthesis</string>
+    <string name="operator_close_parenthesis">Close parenthesis</string>
+
+    <!-- Quick Settings tile and dialog -->
+    <string name="quick_settings_title">Quick Settings tile</string>
+    <string name="quick_settings_body">Add the converter to your Quick Settings panel for one-tap access from anywhere.</string>
+    <string name="quick_settings_add">Add tile</string>
+    <string name="quick_settings_manual">Open Quick Settings, tap Edit, then drag “Converter” into the panel.</string>
+    <string name="quick_settings_requested">Check Quick Settings to finish adding the tile.</string>
+    <string name="dismiss_quick_settings_card">Dismiss Quick Settings card</string>
+    <string name="quick_tile_label">Converter</string>
+    <string name="quick_tile_subtitle">Currency converter</string>
+    <string name="quick_dialog_title">Quick convert</string>
+    <string name="close">Close</string>
+</resources>

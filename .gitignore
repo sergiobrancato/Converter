@@ -1,0 +1,36 @@
+# --- Android / Gradle ---
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Generated signing material — never commit real keys.
+*.jks
+*.keystore
+keystore.properties
+
+# --- Build output inside modules ---
+**/build/
+**/google-services.json
+
+# --- IDE / tooling ---
+.kotlin/
+bin/
+gen/
+out/
+*.hprof
+*.log
+
+# --- Local machine config ---
+.env
+.env.*
+!.env.example

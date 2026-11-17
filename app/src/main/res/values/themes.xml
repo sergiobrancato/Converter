@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        The app draws its own Material 3 surface, so this XML theme only provides
+        the pre-Compose window background and transparent system bars.
+        The converter is dark-first, so the launch frame is near-black too.
+        Palette: ui/theme/Color.kt.
+    -->
+    <style name="Theme.CurrencyConverter" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- Light navigation-bar icons need API 27; enableEdgeToEdge() handles them. -->
+    </style>
+
+    <!--
+        Translucent host for the Quick Settings dialog. The Compose surface draws
+        the scrim and card; the window itself stays completely transparent.
+    -->
+    <style name="Theme.CurrencyConverter.QuickDialog" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">stateVisible|adjustResize</item>
+    </style>
+
+</resources>
