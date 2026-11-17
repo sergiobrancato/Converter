@@ -29,6 +29,12 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",
             )
+
+            // The APK published on GitHub Releases is signed with the local debug
+            // keystore: that keeps the repository free of signing secrets while
+            // still producing an APK that installs with `adb install` or a tap.
+            // Replace this with a real signing config before publishing to a store.
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 

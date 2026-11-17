@@ -2,10 +2,32 @@
 
 A complete, offline-friendly Android currency converter built with **Kotlin**, **Jetpack Compose** and **Material 3** — including a built-in arithmetic evaluator and an Android Quick Settings tile.
 
+[![Download APK](https://img.shields.io/badge/Download-CurrencyConverter.apk-2ea44f?logo=android&logoColor=white)](https://github.com/sergiobrancato/Converter/releases/latest/download/CurrencyConverter.apk)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.0-7F52FF?logo=kotlin&logoColor=white)
 ![Compose](https://img.shields.io/badge/Compose-Material%203-4285F4?logo=jetpackcompose&logoColor=white)
 ![minSdk](https://img.shields.io/badge/minSdk-26-3DDC84?logo=android&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-9CA3AF)
+
+---
+
+## Install on Android
+
+No Play Store, no account, no API key. Open this page on your phone, tap the link, and install:
+
+### → [Download CurrencyConverter.apk](https://github.com/sergiobrancato/Converter/releases/latest/download/CurrencyConverter.apk)
+
+1. **Tap the link above.** The download starts immediately; the file lands in your notification shade or **Downloads** folder.
+2. **Tap the downloaded file** (`CurrencyConverter.apk`). If nothing opens, use **Files → Downloads**.
+3. **Allow installs from this source** if Android asks. Tap **Settings** on the prompt, enable **Allow from this source**, then press back — this is the normal step for any app installed outside the Play Store.
+4. **Tap Install**, then **Open**. Rates load on first launch.
+
+Good to know:
+
+- Requires **Android 8.0 (API 26)** or newer; works on phones, tablets and emulators.
+- The APK is signed with a development key so the repository contains no signing secrets. Play Protect may offer to scan it — choose **Install anyway**.
+- **Updating:** download the newer APK and install it over the old one. Your currency pair and cached rates are kept.
+- The download link always points at the newest release, so it is safe to bookmark.
+- Prefer to build it yourself? Jump to [Quick start](#quick-start).
 
 ---
 
@@ -380,6 +402,22 @@ After changing the tile icon, reinstall the app; Quick Settings caches tile icon
 - Haptics on swap, sheet height, spacing: respective screen files.
 - Tile and dialog dismissal: `QuickConvertActivity` + `QuickConvertScreen`.
 - Promo-card dismissal copy and behaviour: `ui/converter/ConverterScreen.kt` + `ConverterTileService.onTileAdded()`.
+
+### Publishing an APK
+
+The README's download link is stable, so only the asset name matters:
+
+```bash
+./gradlew assembleRelease
+# app/build/outputs/apk/release/app-release.apk
+```
+
+1. Bump `versionCode` / `versionName` in `app/build.gradle.kts`.
+2. Rename the APK to `CurrencyConverter.apk`.
+3. Create a new GitHub release and attach that file. Do **not** rename the asset, or
+   `releases/latest/download/CurrencyConverter.apk` stops resolving.
+
+`release` is signed with the local debug keystore (see the comment in `app/build.gradle.kts`) so a build is installable without committing a keystore. Keep publishing updates signed the same way, otherwise Android refuses to install over the previous version. Use a real signing config before distributing through a store.
 
 ---
 
